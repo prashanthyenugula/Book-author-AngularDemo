@@ -1,0 +1,33 @@
+<h1>{{title}}</h1>
+
+<div class="col">
+    <div class="row-auto">
+      <input type="text" class="form-control" placeholder="title"
+       [(ngModel)]=book.title aria-label="title">
+    </div>
+    <div class="row-auto">
+        <input type="text" class="form-control" placeholder="category"
+        [(ngModel)]=book.category aria-label="category">
+      </div>
+      <div class="row-auto">
+        <input type="text" class="form-control" placeholder="price"
+        [(ngModel)]=book.price aria-label="price">
+      </div>
+      <div class="row-auto">
+        <input type="text" class="form-control" placeholder="publisher"
+        [(ngModel)]=book.publisher aria-label="publisher">
+      </div>
+      <div class="row-auto">
+        <input type="text" class="form-control" placeholder="active"
+        [(ngModel)]=book.active aria-label="active">
+      </div>
+      <div class="mb-3">
+        <label for="formFile" class="form-control">Add Image</label>
+        <input class = "form-control" type="file" id="formFile"
+         placeholder="Image" aria-label="Image">
+      </div>
+      <div class= "col-12">
+        <button type="submit" class="btn btn-primary">submit</button>
+      </div>
+</div>
+
