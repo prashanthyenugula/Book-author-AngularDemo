@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const BASE_URL_TO_ADD_BOOK ="http://localhost:8082/addbook";
-const BASE_URL_TO_SEARCH_BOOK ="http://localhost:8086/books";
+const BASE_URL_TO_ADD_BOOK ="http://localhost:8082/addBook";
+const BASE_URL_TO_SEARCH_BOOK ="http://localhost:8082/books";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class BooksService {
     return this.http.get(BASE_URL_TO_SEARCH_BOOK)
   }
 
-  addBook(books:{
+  createBook(book:{
     title:string;
     category:string;
     image:string;
@@ -22,7 +22,7 @@ export class BooksService {
     active: boolean;
   })
   {
-    return this.http.post(BASE_URL_TO_ADD_BOOK,books)
+    return this.http.post(BASE_URL_TO_ADD_BOOK,book)
   }
 
   constructor(public http: HttpClient) { }

@@ -1,4 +1,4 @@
-<h1>{{title}}</h1>
+<h2 style="text-align: center;">Create Book Here</h2>
 
 <div class="col">
     <div class="row-auto">
@@ -21,13 +21,12 @@
         <input type="text" class="form-control" placeholder="active"
         [(ngModel)]=book.active aria-label="active">
       </div>
-      <div class="mb-3">
-        <label for="formFile" class="form-control">Add Image</label>
-        <input class = "form-control" type="file" id="formFile"
-         placeholder="Image" aria-label="Image">
+      <div class="row-auto">
+        <input type="text" class="form-control" placeholder="logo"
+        [(ngModel)]=book.image aria-label="image">
       </div>
       <div class= "col-12">
-        <button type="submit" class="btn btn-primary">submit</button>
+        <button type="submit" class="btn btn-primary" (click)="save()">Save</button>
       </div>
 </div>
 

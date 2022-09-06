@@ -15,7 +15,7 @@ export class AddbookComponent implements OnInit {
   books:Book[]=[];
 
   save(){
-    const observable = this.booksService.addBook(this.book)
+    const observable = this.booksService.createBook(this.book)
     observable.subscribe(
       (response : any) => {
         console.log(response);
@@ -32,6 +32,11 @@ export class AddbookComponent implements OnInit {
   constructor(public booksService: BooksService) { }
 
   ngOnInit(): void {
+    const promise = this.booksService.getBooks();
+    promise.subscribe((response) => {
+      console.log(response);
+      this.books = response as Book[];
+    })
   }
 
 }
