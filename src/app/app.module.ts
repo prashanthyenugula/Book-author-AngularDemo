@@ -7,12 +7,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { AddbookComponent } from './Components/addbook/addbook.component';
+import { SearchbooksComponent } from './Components/searchbooks/searchbooks.component';
+import { AuthorComponent } from './Components/author/author.component';
+import { GetmybooksComponent } from './Components/getmybooks/getmybooks.component';
+import { DeletebookComponent } from './Components/deletebook/deletebook.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    AddbookComponent
+    AddbookComponent,
+    SearchbooksComponent,
+    AuthorComponent,
+    GetmybooksComponent,
+    DeletebookComponent
   ],
   imports: [
     BrowserModule,

@@ -3,23 +3,22 @@ import { BooksService } from 'src/app/books.service';
 import Book from 'src/app/entity/Book';
 
 @Component({
-  selector: 'app-addbook',
-  templateUrl: './addbook.component.html',
-  styleUrls: ['./addbook.component.css']
+  selector: 'app-searchbooks',
+  templateUrl: './searchbooks.component.html',
+  styleUrls: ['./searchbooks.component.css']
 })
-export class AddbookComponent implements OnInit {
+export class SearchbooksComponent implements OnInit {
 
   title = "Fill the Details to Search Book"
 
   book: Book = new Book();
   books:Book[]=[];
 
-  save(){
-    const observable = this.booksService.createBook(this.book)
+  search(){
+    const observable = this.booksService.getBooks()
     observable.subscribe(
       (response : any) => {
         console.log(response);
-        alert("Books are added successfully!")
       },
       function(error){
         console.log(error);
