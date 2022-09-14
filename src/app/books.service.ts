@@ -29,7 +29,7 @@ export class BooksService {
   }
 
   deleteBook(book : any) {
-    return this.http.delete(BASE_URL_TO_DELETE_BOOK,book.id)
+    return this.http.delete(BASE_URL_TO_DELETE_BOOK+book.id)
   }
 
   constructor(public http: HttpClient) { }

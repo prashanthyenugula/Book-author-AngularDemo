@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BooksService } from 'src/app/books.service';
+import Book from 'src/app/entity/Book';
 
 @Component({
   selector: 'app-author',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorComponent implements OnInit {
 
-  constructor() { }
+  book: Book = new Book();
+  books:Book[]=[];
+
+  isDisabled: boolean = false;
+
+  constructor(public booksService: BooksService) { }
 
   ngOnInit(): void {
   }

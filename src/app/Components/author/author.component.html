@@ -1,5 +1,15 @@
 
 <h3 style="text-align: center;">Author SignIn Successfully</h3>
-<a class="nav-link" routerLink="/addbook" href="#">Create a Book</a>
+<!-- <a class="nav-link" routerLink="/addbook" href="#">Create a Book</a>
 <a class="nav-link" routerLink="/getAllBooks" href="#">Get My Books</a>
-<a class="nav-link" routerLink="/deleteBook" href="#">Delete a Book</a>
+<a class="nav-link" routerLink="/deleteBook" href="#">Delete a Book</a> -->
+<ul class="list-group">
+    <li class="list-group-item" routerLink="/addbook" href="#">Create a Book</li>
+    <li class="list-group-item" routerLink="/getAllBooks" href="#">Get My Books</li>
+    <li class="list-group-item" routerLink="/deleteBook" href="#">Block a Book</li>
+  </ul>
+  <!-- <button type="button" (click)="isDisabled = false" class="fa fa-ban"
+   aria-hidden="true" ></button> -->
+   <br>
+  <button type="button" style="text-align: center;" class="btn btn-success" 
+   routerLink="/signout" href="#" style="color:chartreuse;">Sign Out</button>
