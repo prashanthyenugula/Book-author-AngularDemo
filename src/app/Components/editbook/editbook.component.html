@@ -1,0 +1,39 @@
+<p>editbook works!</p>
+
+<input [(ngModel)]='book.title' placeholder="Enter Title">
+<br>
+<br>
+<input [(ngModel)]='book.category' placeholder="Enter Category">
+<br>
+<br>
+<input [(ngModel)]='book.image' placeholder="Enter Image">
+<br>
+<br>
+<input [(ngModel)]='book.price' placeholder="Enter Price">
+<br>
+<br>
+<input [(ngModel)]='book.publisher' placeholder="Enter Publisher">
+<br/>
+<br/>
+<input [(ngModel)]='book.active' placeholder="Active/Inactive">
+<br/>
+<br/>
+<button (click)="update(book)">Update</button>
+<ol class="list-group list-group-numbered">
+    <li *ngFor="let b of books; index as i"class="list-group-item">
+        <span>{{b.title}}</span>
+        <br>
+        <span>{{b.category}}</span>
+        <br>
+        <span>{{b.image}}</span>
+        <br>
+        <span>{{b.price}}</span>
+        <br>
+        <span>{{b.publisher}}</span>
+        <br>
+        <span>{{b.active}}</span>
+        <button (click)="updatebook(b, i)">Edit Book</button>
+        <br>
+    </li>
+
+</ol>

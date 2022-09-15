@@ -1,21 +1,26 @@
 
 <h2 style="text-align: center;">Search Books</h2>
 
-<input [(ngModel)]='book.title' placeholder="Enter title">
-<br>
-<br>
-<input [(ngModel)]='book.category' placeholder="Enter category">
-<br>
-<br>
-<input [(ngModel)]='book.price' placeholder="Enter price">
-<br>
-<br>
-<input [(ngModel)]='book.publisher' placeholder="Enter publisher">
-<br>
-<br>
-<button (click)="search()">Search</button>
-<br>
-<ol class="list-group list-group-numbered">
+    <input [(ngModel)]='book.title' placeholder="Search Based on title">
+    <br>
+    <br>
+    <button (click)="search()" routerLink="/searchTitle" href="#" >Search</button>
+    <br>
+    <br>
+    <input [(ngModel)]='book.category' placeholder="Search Based on category">
+    <br>
+    <br>
+    <button (click)="search()"routerLink="/searchCategory" href="#">Search</button>
+    <br>
+    <br>
+    <input [(ngModel)]='book.price' placeholder="Search Based on price">
+    <br>
+    <br>
+    <button (click)="search()"routerLink="/searchPrice" href="#">Search</button>
+    <br>
+    <br>
+    
+<!-- <ol class="list-group list-group-numbered">
     <li *ngFor="let b of books; index as i"class="list-group-item">
         <span>{{b.title}}</span>
         <br>
@@ -29,4 +34,4 @@
         <br>
         <span>{{b.active}}</span>
     </li>
-</ol>
+</ol> -->

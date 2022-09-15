@@ -12,6 +12,10 @@ import { AuthorComponent } from './Components/author/author.component';
 import { GetmybooksComponent } from './Components/getmybooks/getmybooks.component';
 import { DeletebookComponent } from './Components/deletebook/deletebook.component';
 import { SignoutComponent } from './Components/signout/signout.component';
+import { SearchtitleComponent } from './Components/searchtitle/searchtitle.component';
+import { SearchcategoryComponent } from './Components/searchcategory/searchcategory.component';
+import { SearchpriceComponent } from './Components/searchprice/searchprice.component';
+import { EditbookComponent } from './Components/editbook/editbook.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { SignoutComponent } from './Components/signout/signout.component';
     AuthorComponent,
     GetmybooksComponent,
     DeletebookComponent,
-    SignoutComponent
+    SignoutComponent,
+    SearchtitleComponent,
+    SearchcategoryComponent,
+    SearchpriceComponent,
+    EditbookComponent
   ],
   imports: [
     BrowserModule,

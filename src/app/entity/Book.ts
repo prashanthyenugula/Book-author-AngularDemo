@@ -2,7 +2,7 @@ export default class Book{
     title:string ="";
     category:string ="";
     image:string ="";
-    price:number = 0;
+    price:string = "";
     publisher:string = "";
     active: boolean = false;
 }
